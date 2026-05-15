@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PARABOOM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <h1>PARABOOM</h1>
+
+  <section id="setup" class="card">
+    <h2>Masukkan Nama Pemain</h2>
+
+    <input id="p1" placeholder="Pemain 1">
+    <input id="p2" placeholder="Pemain 2">
+    <input id="p3" placeholder="Pemain 3">
+    <input id="p4" placeholder="Pemain 4">
+
+    <button onclick="startGame()">Mulai Game</button>
+  </section>
+
+  <section id="game" class="hidden">
+
+    <div class="top-panel">
+
+      <div>
+        <h2>Giliran: <span id="turnName"></span></h2>
+        <p>Dadu: <span id="diceResult">-</span></p>
+      </div>
+
+      <div id="dice" class="dice">🎲</div>
+
+      <button id="rollBtn" onclick="rollDice()">
+        Lempar Dadu
+      </button>
+
+    </div>
+
+    <div class="main">
+
+      <div class="board-area">
+        <img src="assets/board.png" class="board-img">
+
+        <div id="pawnLayer"></div>
+      </div>
+
+      <aside class="side-panel">
+
+        <h2>Status Pemain</h2>
+        <div id="playerStatus"></div>
+
+        <div id="questionBox"
+             class="question-box hidden">
+        </div>
+
+        <h2>Log Permainan</h2>
+        <div id="logBox"></div>
+
+      </aside>
+
+    </div>
+
+  </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
